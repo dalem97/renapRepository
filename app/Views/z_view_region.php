@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <link rel="stylesheet" href="http://localhost/Proyectos2024/renap/public/css/styleIndex.css">
-    <title>Home</title>
+    <link rel="stylesheet" href="http://localhost/Proyectos2024/renap/public/css/styleCIudadanos.css">
+    <title>Regiones</title>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
                     </div>
                     <div class="offcanvas-body">
                         <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
-                            <li class="nav-item">
+                        <li class="nav-item">
                                 <a class="nav-link mx-lg-2 active" aria-current="page" href="<?= base_url('/') ?>">Home</a>
                             </li>
                             <li class="nav-item">
@@ -52,10 +52,33 @@
         </nav>
 
         <section class="hero-section">
-            <div class="container d-flex align-items-center justify-content-center fs-l text-white flex-column">
-                <h1>EFPEM - USAC</h1>
-                <h2>Diego Martínez</h2>
-               
+            <div class="container mt-5">
+                <h1 class="text-center text-white p2 bg-dark bg-gradient text-uppercase">Regiones</h1>
+                <br>
+                <table class="table table-responsive table-bordered border-dark table-hover text-center text-capitalize">
+                    <thead>
+                        <tr class="table-dark table-active text-uppercase text-white">
+                            <th>cod_región</th>
+                            <th>nombre</th>
+                            <th>descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                            foreach($resultado as $fila){   
+                           
+                        ?>
+                        <tr class="table table-active text-light">
+                            <td><?php echo $fila['cod_region'] ?></td>
+                            <td><?php echo $fila['nombre']?></td>
+                            <td><?php echo $fila['descripcion'] ?></td>
+                        </tr>
+                        <?php
+                            }
+                        ?>
+                    </tbody>
+                </table>
+
             </div>
         </section>
 
