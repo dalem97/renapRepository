@@ -7,6 +7,7 @@
     <title>Ciudadanos</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="http://localhost/Proyectos2024/renap/public/css/styleCiudadanos.css">
+    <link rel="stylesheet" href="<?= base_url('css/jquery.dataTables.min.css') ?>">
 </head>
 
 <body>
@@ -103,8 +104,8 @@
                                     <option>108</option>
                                 </select>
                             </div>
-                           
-                           
+
+
                             <div class="col-12">
                                 <button type="submit" class="btn btn-primary">Registrar</button>
                             </div>
@@ -121,7 +122,7 @@
 
     <div class="container mt-5">
 
-        <table class="table table-responsive table-bordered border-dark table-hover text-center text-capitalize">
+        <table class="table table-responsive table-bordered border-dark table-hover text-center text-capitalize" id="dataTable">
             <thead>
                 <tr class="table-dark table-active text-uppercase text-white">
                     <th>dpi</th>
@@ -162,6 +163,10 @@
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <!--JS datatable-->
+    <script src="<?= base_url('js/jquery-3.5.1.js') ?>"></script>
+    <script src="<?= base_url('js/jquery.dataTables.min.js') ?>"></script>
+    <script src="<?= base_url('js/configuracionDataTables.js') ?>"></script>
 </body>
 
 </html>
