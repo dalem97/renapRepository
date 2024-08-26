@@ -15,3 +15,5 @@ $routes->get('verNivelesacad','NivelesAcademicosController::cargarNiveles');
 $routes->get('verRegiones','RegionesController::cargarRegiones');
 
 $routes->get('registrarCiudadano','CiudadanosController::registrarCiudadano');
+
+$routes->get('eliminarCiudadano/(:num)','CiudadanosController::eliminarCiudadanos/$1');

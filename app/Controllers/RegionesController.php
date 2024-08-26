@@ -12,4 +12,10 @@ class RegionesController extends Controller{
         return view('view_regiones',$resultado);
     }
 
+    public function eliminarRegiones($cod_region=null){
+        $region = new Regiones();
+        $region->delete($cod_region);
+        return view('view_regiones');
+    }
+
 }

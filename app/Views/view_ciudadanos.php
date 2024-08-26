@@ -135,6 +135,7 @@
                     <th>fechanac</th>
                     <th>cod_nivel_acad</th>
                     <th>lugar_nacimiento</th>
+                    <th>Procesos</th>
                 </tr>
             </thead>
             <tbody>
@@ -153,6 +154,11 @@
                         <td><?php echo $fila['fechanac'] ?></td>
                         <td><?php echo $fila['cod_nivel_acad'] ?></td>
                         <td><?php echo $fila['lugar_nacimiento'] ?></td>
+                        <td>
+                           <a href="<?php ?>">Actualizar</a> 
+                             / 
+                            <a href="<?=base_url('eliminarCiudadano/'.$fila['dpi']) ?>">Eliminar</a>
+                             </td>
                     </tr>
                 <?php
                 }

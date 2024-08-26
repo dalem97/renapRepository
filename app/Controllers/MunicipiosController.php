@@ -12,4 +12,10 @@ class MunicipiosController extends Controller{
         return view('view_municipios',$resultado);
     }
 
+    public function eliminarMunicipios($cod_muni=null){
+        $muni = new Municipios();
+        $muni->delete($cod_muni);
+        return view('view_municipios');
+    }
+
 }

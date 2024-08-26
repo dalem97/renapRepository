@@ -14,4 +14,10 @@ class NivelesAcademicosController extends Controller{
 
     }
 
+    public function eliminarNiveles($cod_nivelacad=null){
+        $nivel = new NivelesAcademicos();
+        $nivel->delete($cod_nivelacad);
+        return view('view_nivelesacad');
+    }
+
 }
